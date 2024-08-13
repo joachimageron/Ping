@@ -1,14 +1,22 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# Ping! 📲
 
-## Step 1: Start the Metro Server
+**Ping!** est une application Android simple et pratique que j'ai développée pour mon propre usage. Son objectif principal est de permettre à mon téléphone de sonner à distance en envoyant une requête API. C'est idéal pour ces moments où je ne trouve pas mon téléphone ou quand j'ai besoin de me rappeler de quelque chose d'important. Pas de fioritures, juste l'essentiel.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Getting Started
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Ce projet a été démarré avec **@react-native-community/cli**.
+
+### Prérequis
+
+Avant de commencer, assure-toi d'avoir complété les instructions de configuration de l'environnement React Native jusqu'à l'étape "Creating a new application".
+
+### Étape 1: Démarrer le Serveur Metro
+
+Tout d'abord, tu devras démarrer Metro, le bundler JavaScript qui accompagne React Native.
+
+Pour démarrer Metro, exécute la commande suivante à partir de la racine de ton projet React Native :
 
 ```bash
 # using npm
@@ -18,11 +26,11 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+### Étape 2: Démarrer ton Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Laisse Metro Bundler s'exécuter dans son propre terminal. Ouvre un nouveau terminal à partir de la racine de ton projet React Native. Exécute la commande suivante pour démarrer ton application Android ou iOS :
 
-### For Android
+#### Pour Android
 
 ```bash
 # using npm
@@ -32,7 +40,7 @@ npm run android
 yarn android
 ```
 
-### For iOS
+#### Pour iOS
 
 ```bash
 # using npm
@@ -42,38 +50,73 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Si tout est bien configuré, tu devrais voir ta nouvelle application s'exécuter dans ton émulateur Android ou ton simulateur iOS peu de temps après, à condition d'avoir correctement configuré ton émulateur/simulateur.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Étape 3: Modifier ton Application
 
-## Step 3: Modifying your App
+Maintenant que tu as réussi à exécuter l'application, modifions-la.
 
-Now that you have successfully run the app, let's modify it.
+Ouvre `App.tsx` dans ton éditeur de texte préféré et édite quelques lignes.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **Pour Android** : Appuie deux fois sur la touche `R` ou sélectionne "Reload" dans le menu développeur (Ctrl + M (sur Windows et Linux) ou Cmd ⌘ + M (sur macOS)) pour voir tes modifications !
+- **Pour iOS** : Appuie sur Cmd ⌘ + R dans ton simulateur iOS pour recharger l'application et voir tes modifications !
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Félicitations! 🎉
 
-## Congratulations! :tada:
+Tu as réussi à exécuter et modifier ton application React Native. 🥳
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+## Fonctionnalités de Ping! 🚀
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- **Réception de Notifications via API** : Envoie une requête HTTP à l'API, et Ping! se charge du reste. Dès que l'application reçoit la notification, elle fait sonner mon téléphone.
+- **Sonnerie Personnalisée** : Utilisation de la sonnerie par défaut du téléphone ou personnalisation du son à jouer lors de l'alerte.
+- **Fonctionnement en Arrière-Plan** : L'application fonctionne même si elle est en arrière-plan ou que l'écran est verrouillé.
+- **Notifications Haute Priorité** : Utilise Firebase Cloud Messaging (FCM) pour garantir que les notifications sont toujours reçues rapidement, même si le téléphone est en mode économie d'énergie.
 
-# Troubleshooting
+## Pourquoi j'ai créé ce projet 💡
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Je cherchais une solution simple pour pouvoir faire sonner mon téléphone à distance. Que ce soit pour retrouver mon appareil ou pour un rappel, Ping! est conçu pour être rapide et efficace. C'est un projet personnel, donc je n'ai pas prévu de le rendre public sur le Play Store – c'est juste pour moi, mais c'est toujours utile de l'avoir documenté ici pour référence future.
 
-# Learn More
+## Comment ça marche ⚙️
 
-To learn more about React Native, take a look at the following resources:
+1. **Installation** : Installer l'APK généré directement sur mon téléphone.
+2. **Configuration de Firebase** : Le projet est déjà configuré avec Firebase Cloud Messaging. Pas besoin de toucher à ça pour l'instant.
+3. **Utilisation** :
+   - Envoyer une requête API à l'endpoint configuré (voir le script Google Apps ou l'outil que j'utilise pour envoyer la requête).
+   - Le téléphone sonnera dès la réception de la notification.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Développement 🛠️
+
+Le projet est développé en **React Native** sans Expo. La configuration de FCM et la gestion des notifications sont gérées directement dans le code, avec quelques ajustements dans les fichiers natifs d'Android.
+
+### Tech Stack
+
+- **React Native** pour le développement de l'application mobile.
+- **Firebase Cloud Messaging (FCM)** pour la gestion des notifications.
+- **JavaScript** et un peu de **Java** pour les ajustements Android.
+
+## Ce qui reste à faire 🔧
+
+- [ ] Ajouter une option pour changer la sonnerie directement depuis l'application.
+- [ ] Tester sur plusieurs appareils pour s'assurer que tout fonctionne bien.
+- [ ] Peut-être ajouter une interface plus conviviale pour gérer les notifications.
+
+## Licence 📄
+
+Ceci est un projet personnel, pas de licence formelle. Mais si un jour je décide de partager le code, je pourrais opter pour une licence MIT.
+
+---
+
+## Ressources Utiles 📚
+
+Pour en savoir plus sur React Native, jette un coup d'œil aux ressources suivantes :
+
+- [Site officiel de React Native](https://reactnative.dev/) - pour en savoir plus sur React Native.
+- [Getting Started](https://reactnative.dev/docs/getting-started) - un aperçu de React Native et comment configurer ton environnement.
+- [Learn the Basics](https://reactnative.dev/docs/tutorial) - une visite guidée des bases de React Native.
+- [Blog](https://reactnative.dev/blog) - lis les derniers articles officiels du blog de React Native.
+- [@facebook/react-native](https://github.com/facebook/react-native) - le dépôt Open Source sur GitHub pour React Native.
+
+Si tu rencontres des problèmes, consulte la page [Troubleshooting](https://reactnative.dev/docs/troubleshooting).
+
