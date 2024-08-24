@@ -1,4 +1,4 @@
-package com.ping
+package com.ping;
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -18,7 +18,8 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
-              // add(MyReactNativePackage())
+              // add(MyReactNativePackage()
+              add(MyAppPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
