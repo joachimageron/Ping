@@ -7,7 +7,6 @@ const {AlarmModule} = NativeModules;
 const PingScreen: React.FC = () => {
   const logMessage = () => {
     AlarmModule.logMessage('un super message');
-    console.log('Message logged!');
   };
 
   return (
